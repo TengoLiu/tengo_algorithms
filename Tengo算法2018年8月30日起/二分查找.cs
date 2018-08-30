@@ -26,18 +26,28 @@ namespace Tengo算法2018年8月30日起 {
                 if(start != end) {
                     if(arr[mid] > value) {
                         Console.WriteLine("在区间[" + start + "，" + end + "]内找到第" + mid + "个元素的值为" + arr[mid] + ",大了..");
-                        end = --mid;//把上界设置为中值-1
-                        mid = (start + end) / 2;//然后再取中值
+                       
+                        //把上界设置为中值-1
+                        end = --mid;
+
+                        //然后再取中值
+                        mid = (start + end) / 2;
                     }
                     else if(arr[mid] < value) {
                         Console.WriteLine("在区间[" + start + "，" + end + "]内找到第" + mid + "个元素的值为" + arr[mid] + ",小了..");
-                        start = ++mid;//把上界设置为中值+1
-                        mid = (start + end) / 2;//然后再取中值
+                       
+                        //把上界设置为中值+1
+                        start = ++mid;
+
+                        //然后再取中值
+                        mid = (start + end) / 2;
                     }
                     else {
                         Console.WriteLine("在区间[" + start + "，" + end + "]内找到第" + mid + "个元素的值为" + arr[mid] + ",对了！.");
                         index = mid;
-                        break;//找到了就退出
+
+                        //找到了就退出
+                        break;
                     }
                 }
                 else {//如果区间的上限和下限相等了，那就找一下看看这个值是否相等，不等的话，就说明没这个值，等就直接取
