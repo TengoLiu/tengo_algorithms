@@ -36,5 +36,34 @@ namespace Tengo算法2018年8月30日起 {
                 }
             }
         }
+
+        /// <summary>
+        /// 通过递归进行选择排序排序
+        /// </summary>
+        /// <param name="arr">要排序的数组</param>
+        /// <param name="start">开始的位置</param>
+        public static void SortByRecusive(int[] arr, int start) {
+            if (start == arr.Length - 1) {
+                //如果start已经是最后一个条件的话，退出咯
+                return;
+            }
+            //先指向第一个元素
+            var index = start;
+
+            //从start开始，找一个最小的值
+            for (int i = start; i < arr.Length; i++) {
+                if (arr[i] < arr[index]) {
+                    //指向新的最小数
+                    index = i;
+                }
+            }
+            //然后把第一个元素和最小的元素换位
+            var temp = arr[start];
+            arr[start] = arr[index];
+            arr[index] = temp;
+            //然后对start后面的数组继续排序
+            SortByRecusive(arr, ++start);
+
+        }
     }
 }
