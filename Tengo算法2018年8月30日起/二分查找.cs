@@ -21,21 +21,21 @@ namespace Tengo算法2018年8月30日起 {
             int end = arr.Length - 1;
             int mid = (end + start) / 2;
 
-            while(true) {
+            while (true) {
                 //在区间的上限和下限不等的的时候
-                if(start != end) {
-                    if(arr[mid] > value) {
+                if (start != end) {
+                    if (arr[mid] > value) {
                         Console.WriteLine("在区间[" + start + "，" + end + "]内找到第" + mid + "个元素的值为" + arr[mid] + ",大了..");
-                       
+
                         //把上界设置为中值-1
                         end = --mid;
 
                         //然后再取中值
                         mid = (start + end) / 2;
                     }
-                    else if(arr[mid] < value) {
+                    else if (arr[mid] < value) {
                         Console.WriteLine("在区间[" + start + "，" + end + "]内找到第" + mid + "个元素的值为" + arr[mid] + ",小了..");
-                       
+
                         //把上界设置为中值+1
                         start = ++mid;
 
@@ -51,7 +51,7 @@ namespace Tengo算法2018年8月30日起 {
                     }
                 }
                 else {//如果区间的上限和下限相等了，那就找一下看看这个值是否相等，不等的话，就说明没这个值，等就直接取
-                    if(arr[mid] == value) {
+                    if (arr[mid] == value) {
                         Console.WriteLine("在区间[" + start + "，" + end + "]内找到第" + mid + "个元素的值为" + arr[mid] + ",对了！.");
                         index = mid;
                     }
@@ -59,6 +59,35 @@ namespace Tengo算法2018年8月30日起 {
                 }
             }
             return index;
+        }
+
+        /// <summary>
+        /// 通过递归的方法来二分查找值所在的位置
+        /// </summary>
+        /// <param name="arr">要查找的数组，必须有序！</param>
+        /// <param name="value">要查找的值</param>
+        /// <returns></returns>
+        public static int SearchByRecusive(int[] arr, int value, int start, int end) {
+            if (start == end) {
+                if (arr[start] != value) {
+                    return -1;
+                }
+                else {
+                    return start;
+                }
+            }
+            else {
+                var mid = (start + end) / 2;
+                if (arr[mid] > value) {//如果中值大于要查找的值的话，把前面的一段再执行当前的方法
+                    return SearchByRecusive(arr, value, start, --end);
+                }
+                else if (arr[mid] < value) {
+                    return SearchByRecusive(arr, value, ++start, end);
+                }
+                else {
+                    return mid;
+                }
+            }
         }
     }
 }

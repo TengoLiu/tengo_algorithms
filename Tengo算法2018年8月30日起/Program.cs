@@ -12,12 +12,14 @@ namespace Tengo算法2018年8月30日起 {
         static void Main(string[] args) {
 
             #region 二分查找
-            //int[] arr = new int[100];
-            //for (int i = 0; i < 100; i++) {
-            //    arr[i] = i;
-            //}
+            int[] arr = new int[100];
+            for (int i = 0; i < 100; i++) {
+                arr[i] = i;
+            }
             //int index = 二分查找.Search(arr, 199);
             //Console.WriteLine("查到元素所在位置为：" + index);
+            int index = 二分查找.SearchByRecusive(arr, 55,0,arr.Length-1);
+            Console.WriteLine("查到元素所在位置为：" + index);
             #endregion
 
             #region 选择排序
