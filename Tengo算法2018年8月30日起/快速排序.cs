@@ -7,6 +7,18 @@ using System.Threading.Tasks;
 namespace Tengo算法2018年8月30日起 {
     public class 快速排序 {
 
+        static int[] arr = new int[] { 7, 6, 1, 3, 5, 4, 2, 8, 9, 10 };
+
+        public static void Run() {
+            Console.WriteLine("--------快速排序--------");
+            Console.WriteLine("排序前：");
+            Utils.PrintArr(arr);
+            Sort(arr, 0, arr.Length - 1);
+            Console.WriteLine("排序后：");
+            Utils.PrintArr(arr);
+            Console.WriteLine("--------快速排序--------");
+        }
+
         /// <summary>
         /// 快速排序
         /// 把数组第一个元素归位，然后再对这个元素的左边和右边部分执行同样的操作

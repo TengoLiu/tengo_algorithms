@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Tengo算法2018年8月30日起 {
-    public class 选择排序 {
+    public class 选择排序 : AbsSort {
 
         /// <summary>
         /// 排序思想：
@@ -13,7 +13,7 @@ namespace Tengo算法2018年8月30日起 {
         /// </summary>
         /// <param name="arr"></param>
         /// <returns></returns>
-        public static void Sort(int[] arr) {
+        public override void Sort() {
             for (int j = 0; j < arr.Length; j++) {
                 /*
                  * 这里为什么让i=j，这是因为每次遍历完之后，
@@ -42,7 +42,7 @@ namespace Tengo算法2018年8月30日起 {
         /// </summary>
         /// <param name="arr">要排序的数组</param>
         /// <param name="start">开始的位置</param>
-        public static void SortByRecusive(int[] arr, int start) {
+        public  void SortByRecusive(int[] arr, int start) {
             if (start == arr.Length - 1) {
                 //如果start已经是最后一个条件的话，退出咯
                 return;
@@ -65,5 +65,6 @@ namespace Tengo算法2018年8月30日起 {
             SortByRecusive(arr, start + 1);
 
         }
+
     }
 }

@@ -19,36 +19,39 @@ namespace Tengo算法2018年8月30日起 {
             //int index = 二分查找.Search(arr, 199);
             //Console.WriteLine("查到元素所在位置为：" + index);
 
-            //int index = 二分查找.SearchByRecusive(arr, 55,0,arr.Length-1);
+            //int index = 二分查找.SearchByRecusive(arr, 55, 0, arr.Length - 1);
             //Console.WriteLine("查到元素所在位置为：" + index);
             #endregion
 
-            #region 选择排序
-            //选择排序.Sort(arr);
-            //选择排序.SortByRecusive(arr, 0);
-            //PrintArr(arr);
+            //选择排序
+            Console.WriteLine("\n\n\n\n--------选择排序--------");
+            选择排序 selectSort = new 选择排序();
 
+            Console.WriteLine("\n排序前：");
+            Utils.PrintArr(selectSort.arr);
 
-            #endregion
+            selectSort.Sort();
 
-            #region 快速排序
-            Console.WriteLine("快速排序 ：");
-            快速排序.Sort(arr, 0, arr.Length - 1);
-            PrintArr(arr);
-            #endregion
+            Console.WriteLine("\n排序后：");
+            Utils.PrintArr(selectSort.arr);
 
-            Console.WriteLine("");
+            Console.WriteLine("\n\n重置数组：");
+            selectSort.Reset();
+            Utils.PrintArr(selectSort.arr);
+
+            Console.WriteLine("\n使用递归方式排序后：");
+            selectSort.SortByRecusive(selectSort.arr, 0);
+            Utils.PrintArr(selectSort.arr);
+
+            Console.WriteLine("\n\n--------选择排序--------\n\n\n\n");
+
 
             链表LinkList.Run();
 
             Console.ReadKey();
         }
 
-        public static void PrintArr(int[] array) {
-            foreach (var item in array) {
-                Console.Write(item + "，");
-            }
-        }
+
 
     }
 }
