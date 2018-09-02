@@ -63,6 +63,7 @@
     <Compile Include="二分查找.cs" />
     <Compile Include="快速排序.cs" />
     <Compile Include="选择排序.cs" />
+    <Compile Include="链表LinkList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -32,9 +32,14 @@ namespace Tengo算法2018年8月30日起 {
             #endregion
 
             #region 快速排序
+            Console.WriteLine("快速排序 ：");
             快速排序.Sort(arr, 0, arr.Length - 1);
             PrintArr(arr);
             #endregion
+
+            Console.WriteLine("");
+
+            链表LinkList.Run();
 
             Console.ReadKey();
         }
