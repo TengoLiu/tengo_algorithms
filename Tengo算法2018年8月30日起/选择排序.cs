@@ -62,7 +62,7 @@ namespace Tengo算法2018年8月30日起 {
             arr[start] = arr[index];
             arr[index] = temp;
             //然后对start后面的数组继续排序
-            SortByRecusive(arr, ++start);
+            SortByRecusive(arr, start + 1);
 
         }
     }

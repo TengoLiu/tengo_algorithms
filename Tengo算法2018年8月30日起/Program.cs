@@ -25,10 +25,15 @@ namespace Tengo算法2018年8月30日起 {
 
             #region 选择排序
             //选择排序.Sort(arr);
-            选择排序.SortByRecusive(arr, 0);
+            //选择排序.SortByRecusive(arr, 0);
+            //PrintArr(arr);
+
+
+            #endregion
+
+            #region 快速排序
+            快速排序.Sort(arr, 0, arr.Length - 1);
             PrintArr(arr);
-
-
             #endregion
 
             Console.ReadKey();

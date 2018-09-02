@@ -79,10 +79,10 @@ namespace Tengo算法2018年8月30日起 {
             else {
                 var mid = (start + end) / 2;
                 if (arr[mid] > value) {//如果中值大于要查找的值的话，把前面的一段再执行当前的方法
-                    return SearchByRecusive(arr, value, start, --end);
+                    return SearchByRecusive(arr, value, start, end - 1);
                 }
                 else if (arr[mid] < value) {
-                    return SearchByRecusive(arr, value, ++start, end);
+                    return SearchByRecusive(arr, value, start + 1, end);
                 }
                 else {
                     return mid;
