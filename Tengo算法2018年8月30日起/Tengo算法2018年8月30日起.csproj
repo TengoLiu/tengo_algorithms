@@ -62,10 +62,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils.cs" />
-    <Compile Include="二分查找.cs" />
-    <Compile Include="快速排序.cs" />
-    <Compile Include="选择排序.cs" />
-    <Compile Include="链表LinkList.cs" />
+    <Compile Include="BinarySearch.cs" />
+    <Compile Include="QuickSort.cs" />
+    <Compile Include="SelectionSort.cs" />
+    <Compile Include="链表.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

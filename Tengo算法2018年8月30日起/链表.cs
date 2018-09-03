@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Tengo算法2018年8月30日起 {
     /// <summary>
+    /// 链表LinkedList
     /// 2018年9月2日22:48:13
     /// </summary>
-    public class 链表LinkList {
+    public class 链表 {
 
         /// <summary>
         /// 定义一个双向链表

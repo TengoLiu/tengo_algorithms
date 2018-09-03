@@ -5,7 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Tengo算法2018年8月30日起 {
-    public class 二分查找 {
+
+    /// <summary>
+    /// 二分查找
+    /// </summary>
+    public class BinarySearch {
 
         /// <summary>
         /// 使用二分查找查找数组中某个值所在的位置

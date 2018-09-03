@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Tengo算法2018年8月30日起 {
-    public class 快速排序 :AbsSort{
+    public class QuickSort :AbsSort{
 
         /// <summary>
         /// 快速排序
@@ -70,8 +70,5 @@ namespace Tengo算法2018年8月30日起 {
             }
         }
 
-        public override void Sort() {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Tengo算法2018年8月30日起 {
-    public class 选择排序 : AbsSort {
+    public class SelectionSort : AbsSort {
 
         /// <summary>
         /// 排序思想：
@@ -13,18 +13,18 @@ namespace Tengo算法2018年8月30日起 {
         /// </summary>
         /// <param name="arr"></param>
         /// <returns></returns>
-        public override void Sort() {
-            for (int j = 0; j < arr.Length; j++) {
+        public void Sort() {
+            for(int j = 0; j < arr.Length; j++) {
                 /*
                  * 这里为什么让i=j，这是因为每次遍历完之后，
                  * 就确定了第j小的元素，那么无序的序列就从j+1开始了 
                  */
-                for (int i = j; i < arr.Length; i++) {
+                for(int i = j; i < arr.Length; i++) {
                     //取无需列表里面的第一个元素做基数
                     int index = j;
 
                     //如果有比基数小的数
-                    if (arr[index] > arr[i]) {
+                    if(arr[index] > arr[i]) {
                         //把指针指向更小的这个值，注意，这里并不替换位置
                         index = i;
                     }
@@ -42,8 +42,8 @@ namespace Tengo算法2018年8月30日起 {
         /// </summary>
         /// <param name="arr">要排序的数组</param>
         /// <param name="start">开始的位置</param>
-        public  void SortByRecusive(int[] arr, int start) {
-            if (start == arr.Length - 1) {
+        public void SortByRecusive(int[] arr, int start) {
+            if(start == arr.Length - 1) {
                 //如果start已经是最后一个条件的话，退出咯
                 return;
             }
@@ -51,8 +51,8 @@ namespace Tengo算法2018年8月30日起 {
             var index = start;
 
             //从start开始，找一个最小的值
-            for (int i = start; i < arr.Length; i++) {
-                if (arr[i] < arr[index]) {
+            for(int i = start; i < arr.Length; i++) {
+                if(arr[i] < arr[index]) {
                     //指向新的最小数
                     index = i;
                 }

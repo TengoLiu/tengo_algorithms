@@ -24,9 +24,5 @@ namespace Tengo算法2018年8月30日起 {
             arr = new int[] { 7, 6, 1, 3, 5, 4, 2, 8, 9, 10 };
         }
 
-
-        public abstract void Sort();
-
-
     }
 }

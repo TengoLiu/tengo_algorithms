@@ -14,41 +14,41 @@ namespace Tengo算法2018年8月30日起 {
             for(int i = 0; i < 100; i++) {
                 arr[i] = i;
             }
-            int index = 二分查找.Search(arr, 199);
+            int index = BinarySearch.Search(arr, 199);
             Console.WriteLine("查到元素" + 199 + "所在位置为：" + index);
 
-            index = 二分查找.SearchByRecusive(arr, 55, 0, arr.Length - 1);
+            index = BinarySearch.SearchByRecusive(arr, 55, 0, arr.Length - 1);
             Console.WriteLine("查到元素" + 55 + "所在位置为：" + index);
             #endregion
 
             #region  选择排序
             Console.WriteLine("\n\n\n--------选择排序--------");
-            选择排序 selectSort = new 选择排序();
+            SelectionSort selectionSort = new SelectionSort();
 
             Console.WriteLine("排序前：");
-            Utils.PrintArr(selectSort.arr);
+            Utils.PrintArr(selectionSort.arr);
 
             //执行选择排序
-            selectSort.Sort();
+            selectionSort.Sort();
 
             Console.WriteLine("\n排序后：");
-            Utils.PrintArr(selectSort.arr);
+            Utils.PrintArr(selectionSort.arr);
 
             Console.WriteLine("\n\n重置数组：");
-            selectSort.Reset();
-            Utils.PrintArr(selectSort.arr);
+            selectionSort.Reset();
+            Utils.PrintArr(selectionSort.arr);
 
             Console.WriteLine("\n使用递归方式排序后：");
             //执行基于递归实现的选择排序
-            selectSort.SortByRecusive(selectSort.arr, 0);
-            Utils.PrintArr(selectSort.arr);
+            selectionSort.SortByRecusive(selectionSort.arr, 0);
+            Utils.PrintArr(selectionSort.arr);
 
             Console.WriteLine("\n--------选择排序--------");
             #endregion
 
             #region 快速排序
             Console.WriteLine("\n\n\n--------快速排序--------");
-            快速排序 quickSort = new 快速排序();
+            QuickSort quickSort = new QuickSort();
 
             Console.WriteLine("排序前：");
             Utils.PrintArr(quickSort.arr);
@@ -61,7 +61,7 @@ namespace Tengo算法2018年8月30日起 {
 
             #region 链表LinkList
             Console.WriteLine("\n\n\n--------链表LinkList--------");
-            链表LinkList.Run();
+            链表.Run();
             Console.WriteLine("--------链表LinkList--------");
             #endregion
 
