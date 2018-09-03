@@ -23,13 +23,14 @@ namespace Tengo算法2018年8月30日起 {
             //Console.WriteLine("查到元素所在位置为：" + index);
             #endregion
 
-            //选择排序
+            #region  选择排序
             Console.WriteLine("\n\n\n\n--------选择排序--------");
             选择排序 selectSort = new 选择排序();
 
             Console.WriteLine("\n排序前：");
             Utils.PrintArr(selectSort.arr);
 
+            //执行选择排序
             selectSort.Sort();
 
             Console.WriteLine("\n排序后：");
@@ -40,13 +41,16 @@ namespace Tengo算法2018年8月30日起 {
             Utils.PrintArr(selectSort.arr);
 
             Console.WriteLine("\n使用递归方式排序后：");
+            //执行基于递归实现的选择排序
             selectSort.SortByRecusive(selectSort.arr, 0);
             Utils.PrintArr(selectSort.arr);
 
             Console.WriteLine("\n\n--------选择排序--------\n\n\n\n");
+            #endregion
 
-
+            #region 链表LinkList
             链表LinkList.Run();
+            #endregion
 
             Console.ReadKey();
         }
