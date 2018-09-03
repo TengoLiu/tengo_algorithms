@@ -5,19 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Tengo算法2018年8月30日起 {
-    public class 快速排序 {
-
-        static int[] arr = new int[] { 7, 6, 1, 3, 5, 4, 2, 8, 9, 10 };
-
-        public static void Run() {
-            Console.WriteLine("--------快速排序--------");
-            Console.WriteLine("排序前：");
-            Utils.PrintArr(arr);
-            Sort(arr, 0, arr.Length - 1);
-            Console.WriteLine("排序后：");
-            Utils.PrintArr(arr);
-            Console.WriteLine("--------快速排序--------");
-        }
+    public class 快速排序 :AbsSort{
 
         /// <summary>
         /// 快速排序
@@ -35,7 +23,7 @@ namespace Tengo算法2018年8月30日起 {
         /// <param name="arr">要排序的数组</param>
         /// <param name="start">子数组的开始位置</param>
         /// <param name="end">子数组的结束位置</param>
-        public static void Sort(int[] arr, int start, int end) {
+        public void Sort(int[] arr, int start, int end) {
             //先找出退出条件
             if (end <= start) {
                 //如果end==start或者end-start==1，表示只剩一个或者0个元素，那么就不用排了，大功告成~
@@ -80,6 +68,10 @@ namespace Tengo算法2018年8月30日起 {
                 Sort(arr, start, left - 1);
                 Sort(arr, left + 1, end);
             }
+        }
+
+        public override void Sort() {
+            throw new NotImplementedException();
         }
     }
 }
