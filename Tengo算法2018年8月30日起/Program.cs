@@ -21,6 +21,7 @@ namespace Tengo算法2018年8月30日起 {
             Console.WriteLine("查到元素" + 55 + "所在位置为：" + index);
             #endregion
 
+
             #region  选择排序
             Console.WriteLine("\n\n\n--------选择排序--------");
             SelectionSort selectionSort = new SelectionSort();
@@ -46,6 +47,19 @@ namespace Tengo算法2018年8月30日起 {
             Console.WriteLine("\n--------选择排序--------");
             #endregion
 
+            #region 冒泡排序
+            Console.WriteLine("\n\n\n--------冒泡排序--------");
+            BubbleSort bubbleSort = new BubbleSort();
+
+            Console.WriteLine("排序前：");
+            Utils.PrintArr(bubbleSort.arr);
+            //执行冒泡排序
+            bubbleSort.Sort();
+            Console.WriteLine("\n排序后：");
+            Utils.PrintArr(bubbleSort.arr);
+            Console.WriteLine("\n--------冒泡排序--------");
+            #endregion
+
             #region 快速排序
             Console.WriteLine("\n\n\n--------快速排序--------");
             QuickSort quickSort = new QuickSort();
@@ -64,6 +78,8 @@ namespace Tengo算法2018年8月30日起 {
             链表.Run();
             Console.WriteLine("--------链表LinkList--------");
             #endregion
+
+
 
             Console.ReadKey();
         }
