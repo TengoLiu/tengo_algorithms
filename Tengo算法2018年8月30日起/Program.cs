@@ -57,6 +57,16 @@ namespace Tengo算法2018年8月30日起 {
             bubbleSort.Sort();
             Console.WriteLine("\n排序后：");
             Utils.PrintArr(bubbleSort.arr);
+
+            Console.WriteLine("\n\n重置数组：");
+            bubbleSort.Reset();
+            Utils.PrintArr(bubbleSort.arr);
+
+            Console.WriteLine("\n使用递归方式排序后：");
+            //执行基于递归实现的选择排序
+            bubbleSort.SortByRecusive(0);
+            Utils.PrintArr(bubbleSort.arr);
+
             Console.WriteLine("\n--------冒泡排序--------");
             #endregion
 
@@ -76,10 +86,16 @@ namespace Tengo算法2018年8月30日起 {
             #region 链表LinkList
             Console.WriteLine("\n\n\n--------链表LinkList--------");
             链表.Run();
-            Console.WriteLine("--------链表LinkList--------");
+            Console.WriteLine("\n--------链表LinkList--------");
             #endregion
 
 
+            #region 广度优先搜索
+            图的应用 p = new 图的应用();
+            Console.WriteLine("\n\n\n--------广度优先搜索--------");
+            p.BFS();
+            Console.WriteLine("\n--------广度优先搜索--------");
+            #endregion
 
             Console.ReadKey();
         }

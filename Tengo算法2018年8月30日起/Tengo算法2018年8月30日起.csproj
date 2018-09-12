@@ -66,6 +66,7 @@
     <Compile Include="BinarySearch.cs" />
     <Compile Include="QuickSort.cs" />
     <Compile Include="SelectionSort.cs" />
+    <Compile Include="图的应用.cs" />
     <Compile Include="链表.cs" />
   </ItemGroup>
   <ItemGroup>
