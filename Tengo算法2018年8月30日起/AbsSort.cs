@@ -15,13 +15,13 @@ namespace Tengo算法2018年8月30日起 {
         /// <summary>
         /// 要排序的数组
         /// </summary>
-        public int[] arr = new int[] { 7, 6, 1, 3, 5, 4, 2, 8, 9, 10 };
+        public int[] arr = new int[] { 7, 9, 1, 8, 10, 4, 2, 5, 6, 3 };
 
         /// <summary>
         /// 重置数组
         /// </summary>
         public void Reset() {
-            arr = new int[] { 7, 6, 1, 3, 5, 4, 2, 8, 9, 10 };
+            arr = new int[] { 7, 9, 1, 8, 10, 4, 2, 5, 6, 3 };
         }
 
     }
